@@ -1,0 +1,28 @@
+{
+    "name": "AESLib", 
+    "keywords": [
+        "cryptography", 
+        "aes"
+    ], 
+    "description": "Small AES implementation in ASM", 
+    "repository": {
+        "type": "git", 
+        "url": "https://github.com/DavyLandman/AESLib.git"
+    }, 
+    "frameworks": [
+        "arduino"
+    ], 
+    "platforms": [
+        "atmelavr"
+    ], 
+    "version": "445cfed9c9", 
+    "authors": [
+        {
+            "email": "davy.landman@swat.engineering", 
+            "url": "https://github.com/DavyLandman", 
+            "maintainer": false, 
+            "name": "Davy Landman"
+        }
+    ], 
+    "id": 276
+}
