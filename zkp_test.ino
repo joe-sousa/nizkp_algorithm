@@ -7,7 +7,7 @@
 #include <AESLib.h>
 #include <SHA256.h>
 
-SoftwareSerial bluetooth(10, 11); // RX, TX
+SoftwareSerial bluetooth(6, 7); // RX, TX
 
 int memoryTest()
 {
@@ -424,11 +424,18 @@ void setup()
     * 323  Encrypted data
     * 340  Registration
     ********************************************************/
-    
+    pinMode(2, OUTPUT);
     Serial.begin(115200);
     bluetooth.begin(9600);
     uECC_set_rng(&RNG);
     EEPROM.put(340, 0);
+}
+
+void lightOn(){
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second  
 }
 
 void loop()
@@ -442,6 +449,7 @@ void loop()
         switch (data[0])
         {
         case 'R': //Registration request
+            lightOn();
             begin = millis();
             initialAction();
             free(data);
