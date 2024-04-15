@@ -1,6 +1,6 @@
 # Towards a Comparative Study of Authentication Mechanisms for Low-Resource Internet of Things Devices
 
-**"Preparing the Development Environment and Dependencies"**
+**Preparing the Development Environment and Dependencies**
 
 ## Cloning the Repository 📥:
 
