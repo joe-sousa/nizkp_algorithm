@@ -77,7 +77,7 @@ scope and preliminary results derived from a brief computational experiment. Our
 Non-Interactive Zero-Knowledge Proof (NIZKP) algorithm on Arduino Nano. This work contributes to the literature and practice of IoT device authentication,
 offering insights that can aid in better decision-making processes in industrial scenarios.
 
-## 📍 Proposal
+## Proposal 📍:
 In light of this motivation, this ongoing research project aims to conduct a robust comparison among different authentication mechanisms in the context of
 low-resource IoT devices with the goal of identifying the most efficient one. Specifically, we seek to investigate whether NIZKP over elliptic curves demands 
 fewer computational resources compared to conventional authentication mechanisms, that is: Hash-based Message Authentication Code (HMAC), Advanced Encryption
