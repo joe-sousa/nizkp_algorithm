@@ -1,8 +1,7 @@
-#ifndef _BASE_64_URL_H_
-#define _BASE_64_URL_H_
+#pragma once
 
-#include <Arduino.h>
-
+#include <stdint.h>
+#include <stddef.h>
 class Base64URL
 {
 
@@ -30,4 +29,3 @@ public:
     static bool base64urlDecode(const char *input, size_t inputLen, void *output,
                          size_t *outputLen);
 };
-#endif
