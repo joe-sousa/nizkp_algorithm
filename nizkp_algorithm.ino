@@ -398,7 +398,6 @@ void generate_pacNIZKP() {
   uECC_set_rng(&RNG);
   EEPROM.put(340, 0);
   Serial.println(F("Ready "));
-  
 }
 
 
