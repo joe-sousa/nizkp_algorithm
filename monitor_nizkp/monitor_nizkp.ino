@@ -25,15 +25,12 @@ void setup() {
 }
 
 void loop() {
-  // Verifica se o pino de monitoração está HIGH (indicando que o Nano está gerando chaves)
   if (digitalRead(pinoMonitoraParChaves) == HIGH && !chaveGerada) {
-    // Marca que a chave foi gerada
     chaveGerada = true;
-
-    // Realiza a leitura de corrente, tensão e potência apenas quando o pino está HIGH e a chave foi gerada
-    float corrente_mA = ina219.getCurrent_mA(); // Obtém a corrente em mA
-    float tensao_V = ina219.getBusVoltage_V();  // Obtém a tensão em V
-    float potencia_mW = corrente_mA * tensao_V; // Calcula a potência em mW
+    
+    float corrente_mA = ina219.getCurrent_mA(); 
+    float tensao_V = ina219.getBusVoltage_V();  
+    float potencia_mW = corrente_mA * tensao_V;
 
     Serial.print("Corrente (mA) na geração do par de chaves: ");
     Serial.println(corrente_mA);
@@ -41,7 +38,6 @@ void loop() {
     Serial.println(tensao_V);
     Serial.print("Potência (mW): ");
     Serial.println(potencia_mW);
-    Serial.println("-----------------------");
   }else if (digitalRead(pinoMonitoraEnvioPacote) == HIGH && !pacoteEnviado) {
     // Marca que o pacote foi enviado
     pacoteEnviado = true;
